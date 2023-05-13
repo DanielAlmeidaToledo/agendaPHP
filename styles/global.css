@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../Media/bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    color: #fff;
+}
+
+.principal-content {
+    width: 40rem;
+    height: 40rem;
+}
+
+.principal-title {
+    text-align: center;
+    margin: 5rem 0;
+    font-size: 3rem;
+}
