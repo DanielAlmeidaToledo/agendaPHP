@@ -1,14 +1,3 @@
-body {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-image: url(../Media/bg2.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: bottom;
-}
-
 .principal-content {
     display: flex;
 }
@@ -20,27 +9,25 @@ body {
 
 /* Div principal-buttons */
 .principal-buttons {
-    display: flex;
-    flex-wrap: wrap;
+    margin-top: 3rem;
 }
 
 .principal-link {
-    width: 50%;
-    border: 1px solid gray;
-    border-radius: .5rem;
-    text-align: center;
+    width: 24rem;
+    height: 3.5rem;
     text-decoration: none;
-    margin: 1.5rem auto;
-    padding: 1rem 0;
+    margin: 2.5rem auto;
     font-size: 1.2rem;
     font-weight: 500;
-    color: #000;
-    background-color: rgb(255, 255, 255);
-}
-
-.principal-link:hover {
-    transition: .4s;
-    box-shadow: 1px 1px 20px 4px #5442DF;;
+    background-color: #5442DF;
+    color: #fff;
+    outline: none;
+    border: none;
+    border-radius: .5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Div principal-image */
