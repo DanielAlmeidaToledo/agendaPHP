@@ -2,7 +2,7 @@
 
 <?php
 
-require_once 'agendaDAO.php';
+require_once '../DAO/agendaDAO.php';
 
 class AgendaBO {
     

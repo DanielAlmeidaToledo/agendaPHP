@@ -2,7 +2,7 @@
 
 <?php
 
-require_once 'conexao.php';
+require_once '../Util/conexaoBD.php';
 
 class AgendaDAO {
     
