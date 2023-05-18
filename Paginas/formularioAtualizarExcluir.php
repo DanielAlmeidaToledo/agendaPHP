@@ -1,14 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
-	<title>Atualização e Exclusão de Contato</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/global.css">
+    <title>Agenda - Atualização e Exclusão</title>
 </head>
 <body>
-	<h1>Atualização e Exclusão de Contato</h1>
-	<form action="../Paginas/formularioAtualizarExcluir2.php" method="GET">
-		<label for="nome">Nome:</label>
-		<input type="text" id="nome" name="nome" required><br><br>
-		<input type="submit" value="Buscar">
-	</form>
+	<div class="principal-content">
+
+		<h1 class="principal-title">Atualização e Exclusão de Contato</h1>
+
+		<form action="../Paginas/formularioAtualizarExcluir2.php" method="GET">
+			<div class="label-input">
+				<label for="nome">Nome:</label>
+				<input type="text" id="nome" name="nome" required><br><br>
+			</div>
+			<input type="submit" value="Buscar">
+		</form>
+	</div>
+	
+	<footer>
+        <p>Desenvolvido por <a href="https://br.linkedin.com/in/danielalmeidadetoledo" target="_blank">Daniel Toledo</a></p>
+    </footer>
+
 </body>
 </html>

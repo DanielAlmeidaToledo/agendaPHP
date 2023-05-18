@@ -39,3 +39,5 @@ if (isset($_GET['pagina'])) {
 } else {
     require_once 'Paginas/paginaPrincipal.php';
 }
+
+?>
