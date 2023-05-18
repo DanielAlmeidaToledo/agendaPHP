@@ -9,6 +9,16 @@ body {
     background-position: bottom;
 }
 
+.principal-content {
+    display: flex;
+}
+
+.principal-info, .principal-image {
+    width: 50%;
+    height: 100%;
+}
+
+/* Div principal-buttons */
 .principal-buttons {
     display: flex;
     flex-wrap: wrap;
@@ -29,6 +39,17 @@ body {
 }
 
 .principal-link:hover {
-    transition: .3s;
-    box-shadow: 1px 1px 12px 0px rgb(255, 255, 255);
+    transition: .4s;
+    box-shadow: 1px 1px 20px 4px #5442DF;;
+}
+
+/* Div principal-image */
+.principal-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.principal-image img {
+    width: 35rem;
 }

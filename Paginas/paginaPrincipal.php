@@ -14,16 +14,22 @@
 <body>
 
     <div class="principal-content">
-
-        <h1 class="principal-title">Menu Principal</h1>
-
-        <div class="principal-buttons">
-            <a class="principal-link" href="formularioInclusao.php">Incluir</a>
-            <a class="principal-link" href="formularioConsulta.php">Consultar</a>
-            <a class="principal-link" href="formularioAtualizarExcluir.php">Atualizar e Excluir</a>
+        <div class="principal-info">
+            <h1 class="principal-title">Menu Principal</h1>
+            <div class="principal-buttons">
+                <a class="principal-link" href="formularioInclusao.php">Incluir</a>
+                <a class="principal-link" href="formularioConsulta.php">Consultar</a>
+                <a class="principal-link" href="formularioAtualizarExcluir.php">Atualizar e Excluir</a>
+            </div>
         </div>
-
+        <div class="principal-image">
+            <img class="principal-image" src="../Media/img1.svg" alt="Imagem de uma agenda">
+        </div>
     </div>
+
+    <footer>
+        <p>Desenvolvido por <a href="https://br.linkedin.com/in/danielalmeidadetoledo" target="_blank">Daniel Toledo</a></p>
+    </footer>
     
 </body>
 </html>
