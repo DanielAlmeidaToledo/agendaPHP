@@ -1,4 +1,6 @@
-// O arquivo agendaBO.php deve conter a lógica de negócio do sistema, ou seja, as regras que definem como as operações do banco de dados devem ser realizadas. Abaixo segue um exemplo básico de implementação:
+<!-- O arquivo agendaBO.php deve conter a lógica de negócio do sistema, ou seja, 
+as regras que definem como as operações do banco de dados devem ser realizadas. 
+Abaixo segue um exemplo básico de implementação: -->
 
 <?php
 

@@ -1,5 +1,3 @@
-// O arquivo agendaDAO.php deve conter as funções responsáveis por realizar as operações no banco de dados. Abaixo segue um exemplo básico de implementação:
-
 <?php
 
 require_once('../Util/conexaoBD.php');
@@ -9,10 +7,12 @@ class AgendaDAO {
     private $conexao;
     
     public function __construct() {
-        $this->conexao = Conexao::getInstance();
+        $this->conexao = new PDO("mysql:host=localhost;port=3306;dbname=agenda", "root", "");
+        $this->conexao->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     }
     
     public function inserirContato($nome, $telefone) {
+        echo "Contato inserido com sucesso!";
         $sql = "INSERT INTO contatos (nome, telefone) VALUES (:nome, :telefone)";
         $stmt = $this->conexao->prepare($sql);
         $stmt->bindValue(':nome', $nome);

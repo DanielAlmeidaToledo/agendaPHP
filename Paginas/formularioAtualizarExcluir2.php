@@ -9,7 +9,7 @@
 			<?php
 				require_once("../DAO/agendaDAO.php");
 				$agendaDAO = new AgendaDAO();
-				$contato = $agendaDAO->buscarContato($_GET['nome']);
+				$contato = $agendaDAO->consultarContato($_GET['nome']);
 				if ($contato) {
 					echo "<label for='nome'>Nome:</label>";
 					echo "<input type='text' id='nome' name='nome' value='".$contato['nome']."' required><br><br>";

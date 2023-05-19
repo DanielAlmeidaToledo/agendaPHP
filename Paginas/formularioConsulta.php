@@ -15,7 +15,7 @@
 	<div class="principal-content">
 
 		<h1 class="principal-title">Consulta</h1>
-		<form action="Forms/processaTodosFormularios.php" method="post">
+		<form action="Forms/processaTodosFormularios.php" method="GET">
 			<div class="label-input">
 				<label for="id_contato">ID do contato:</label>
 				<input type="text" name="id_contato" id="id_contato" required>

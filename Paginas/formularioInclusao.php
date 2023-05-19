@@ -23,7 +23,7 @@
                 <label for="telefone">Telefone</label>
                 <input type="text" id="telefone" name="telefone" required>
             </div>
-            <input type="submit" value="Inserir">
+            <button type="submit" name="inserir">inserir</button>
         </form>
     </div>
 

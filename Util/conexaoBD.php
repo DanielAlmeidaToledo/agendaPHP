@@ -6,12 +6,12 @@
     $dbname = "agenda";
 
     try {
-        $conn = new PDO("mysql:host=$servername; port=4306 ;dbname=$dbname", $user, $pass);
+        $conn = new PDO("mysql:host=$servername; port=3306 ;dbname=$dbname", $user, $pass);
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         if($conn) {
-            echo "Conexão realizada com sucesso!";
+            // echo "Conexão realizada com sucesso!";
         } else {
-            echo "Conexão falhou!";
+            // echo "Conexão falhou!";
         }
     } catch(PDOException $e) {
         echo "Conexão falhou: " . $e->getMessage();
