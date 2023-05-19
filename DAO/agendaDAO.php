@@ -2,7 +2,7 @@
 
 <?php
 
-require_once '../Util/conexaoBD.php';
+require_once('../Util/conexaoBD.php');
 
 class AgendaDAO {
     
@@ -50,6 +50,13 @@ class AgendaDAO {
         $stmt->bindValue(':id', $id);
         $stmt->execute();
         return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
+
+    public function listarContatos() {
+        $sql = "SELECT * FROM contatos";
+        $stmt = $this->conexao->prepare($sql);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
     
 }

@@ -27,5 +27,5 @@ if(isset($_POST['inserir'])) {
   // Caso o botão "excluir" tenha sido pressionado, chama o método de exclusão do contato
   $id_contato = $_POST['id_contato'];
   AgendaBO::excluirContato($id_contato);
-  header("Location: ../Paginas/paginaPrincipal.php");
+  header("Location: ../Paginas/formularioAtualizarExcluir.php");
 }
