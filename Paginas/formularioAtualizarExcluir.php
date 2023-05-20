@@ -53,6 +53,10 @@
 
 	</div>
 	
+    <a href="../Paginas/paginaPrincipal.php" class="return-page">
+        <img src="../Media/back.png" alt="Voltar">
+    </a>
+
 	<footer>
         <p>Desenvolvido por <a href="https://br.linkedin.com/in/danielalmeidadetoledo" target="_blank">Daniel Toledo</a></p>
     </footer>

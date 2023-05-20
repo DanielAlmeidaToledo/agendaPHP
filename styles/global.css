@@ -71,6 +71,19 @@ form {
     width: 35rem;
 }
 
+/* Back link */
+.return-page {
+    position: absolute;
+    inset: 0 auto auto 0;
+    padding: 2rem;
+}
+
+.return-page img:hover {
+    transition: .2s;
+    transform: scale(1.1);
+}
+
+
 /* Footer */
 footer {
     position: absolute;
