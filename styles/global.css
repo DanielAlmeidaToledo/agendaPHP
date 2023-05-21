@@ -71,6 +71,12 @@ form {
     width: 35rem;
 }
 
+/* Table */
+.table {
+    width: 75%;
+    margin: 0 auto;
+}
+
 /* Modal */
 .modal {
     width: 100%;
@@ -139,6 +145,7 @@ form {
 
 .modal-btn button {
     width: 48%;
+    height: 3rem !important;
 }
 
 /* Back link */

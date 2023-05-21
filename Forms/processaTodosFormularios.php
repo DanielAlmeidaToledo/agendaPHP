@@ -16,15 +16,15 @@
     // header("Location: ../Paginas/formularioAtualizarExcluir.php");
 
   } else if(isset($_POST['atualizar'])) {
-    $id_contato = $_POST['id_contato'];
-    $nome = strtoupper($_POST['nome']);
+    $id = $_POST['id'];
+    $nome = $_POST['nome'];
     $telefone = $_POST['telefone'];
-    $agendaBO->atualizarContato($id_contato, $nome, $telefone);
+    $agendaBO->atualizarContato($id, $nome, $telefone);
     header("Location: ../Paginas/formularioAtualizarExcluir.php");
 
   } else if(isset($_POST['excluir'])) {
-    $id_contato = $_POST['id_contato'];
-    $agendaBO->excluirContato($id_contato);
+    $id = $_POST['id'];
+    $agendaBO->excluirContato($id);
     header("Location: ../Paginas/formularioAtualizarExcluir.php");
   }
 

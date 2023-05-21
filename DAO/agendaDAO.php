@@ -12,7 +12,6 @@ class AgendaDAO {
     }
     
     public function inserirContato($nome, $telefone) {
-        echo "Contato inserido com sucesso!";
         $sql = "INSERT INTO contatos (nome, telefone) VALUES (:nome, :telefone)";
         $stmt = $this->conexao->prepare($sql);
         $stmt->bindValue(':nome', $nome);
@@ -36,6 +35,7 @@ class AgendaDAO {
     }
     
     public function atualizarContato($id, $nome, $telefone) {
+        echo "<script>alert('id: $id, nome: $nome, telefone: $telefone')</script>";
         $sql = "UPDATE contatos SET nome = :nome, telefone = :telefone WHERE id = :id";
         $stmt = $this->conexao->prepare($sql);
         $stmt->bindValue(':id', $id);

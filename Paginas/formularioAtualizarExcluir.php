@@ -27,7 +27,7 @@
                                 <th scope="col">Id</th>
                                 <th scope="col">Nome</th>
                                 <th scope="col">Telefone</th>
-                                <th scope="col">Ações</th>
+                                <th scope="col" style="width: 15rem;">Ações</th>
                             </tr>
                         </thead>
                         <tbody>';
@@ -70,7 +70,7 @@
                                             <input type="hidden" name="id" value="' . $contato['id'] . '">
 											<div class="modal-btn">
 												<button type="submit" class="btn btn-cancel" data-dismiss="modal">Cancelar</button>
-												<button type="submit" class="btn">Salvar</button>
+												<button type="submit" class="btn" name="atualizar">Salvar</button>
 											</div>
                                         </form>
                                     </div>
