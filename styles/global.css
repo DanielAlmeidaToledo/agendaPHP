@@ -75,6 +75,22 @@ form {
 .table {
     width: 75%;
     margin: 0 auto;
+    background-color: transparent;
+}
+
+.table thead {
+    background-color: #5442DF;
+}
+
+.btn-table {
+    height: 2.2rem;
+    color: #fff;
+    margin: 0 .2rem 0 0;
+    cursor: pointer;
+}
+
+.btn-table-edit {
+    background-color: #5442DF;
 }
 
 /* Modal */
@@ -85,13 +101,13 @@ form {
 
 .modal-dialog {
     margin-top: 10rem;
-    box-shadow: 1px 1px 20px 2px #5442df5c;
+    box-shadow: 2px 2px 20px 2px #0000005c;
     border-radius: .5rem;
 }
 
 .modal-content {
-    background-color: #000;
     color: #fff;    
+    background-color: #181818;
 }
 
 .modal-header button {

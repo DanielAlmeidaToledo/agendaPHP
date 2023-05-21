@@ -38,8 +38,8 @@
                             <td>' . $contato['nome'] . '</td>
                             <td>' . $contato['telefone'] . '</td>
                             <td>
-                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editarModal' . $contato['id'] . '">Editar</button>
-                                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#excluirModal' . $contato['id'] . '">Excluir</button>
+                                <button type="button" class="btn btn-table btn-table-edit" data-toggle="modal" data-target="#editarModal' . $contato['id'] . '">Editar</button>
+                                <button type="button" class="btn btn-table btn-danger" data-toggle="modal" data-target="#excluirModal' . $contato['id'] . '">Excluir</button>
                             </td>
                         </tr>';
                 }

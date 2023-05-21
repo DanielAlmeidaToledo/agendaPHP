@@ -11,8 +11,8 @@
     header("Location: ../Paginas/formularioAtualizarExcluir.php");
 
   } else if(isset($_POST['consulta'])) {
-    $id_contato = $_POST['id_contato'];
-    $contato = $agendaBO->consultarContato($id_contato);
+    $id = $_POST['id'];
+    $contato = $agendaBO->consultarContato($id);
     // header("Location: ../Paginas/formularioAtualizarExcluir.php");
 
   } else if(isset($_POST['atualizar'])) {
