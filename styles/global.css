@@ -164,6 +164,46 @@ form {
     height: 3rem !important;
 }
 
+.modal-dialog.modal-dialog-centered.modal {
+    position: absolute;
+    z-index: 100;
+    width: 20rem;
+    height: 20rem;
+    left: 50%;
+    top: 50%;
+    background-color: rgba(48, 48, 157, 0.426);
+    transform: translate(-50%, -50%);
+}
+
+.result-card {
+    width: 32%;
+    height: auto;
+    margin: 1rem auto 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.result-card img {
+    width: 5rem;
+    height: 5rem;
+    margin-left: 2rem;
+}
+
+.result-card div {
+    width: 70%;
+    margin-left: 4rem;
+}
+
+.result-card p {
+    margin: .4rem 0;
+}
+
+.not-found p {
+    text-align: center;
+    width: 100%;
+    font-size: 1.1rem;
+}
+
 /* Back link */
 .return-page {
     position: absolute;

@@ -17,11 +17,11 @@
         <form action="../Forms/processaTodosFormularios.php" method="POST">
             <div class="label-input">
                 <label for="nome">Nome</label>
-                <input type="text" id="nome" name="nome" required><br><br>
+                <input type="text" id="nome" name="nome" minlength="1" required><br><br>
             </div>
             <div class="label-input">
                 <label for="telefone">Telefone</label>
-                <input type="text" id="telefone" name="telefone" required>
+                <input type="text" id="telefone" name="telefone" minlength="9" required>
             </div>
             <button type="submit" name="inserir">inserir</button>
         </form>
