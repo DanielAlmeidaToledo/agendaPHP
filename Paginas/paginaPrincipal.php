@@ -3,7 +3,7 @@
     $colors = array('#FF0000', '#00FF00', '#0000FF', '#FFFF00', '#FF00FF', '#00FFFF', '#FFA500', '#800080', '#008000', '#FFC0CB');
 
     // Defina o tempo limite em segundos (1,5 minutos = 90 segundos)
-    $limitTime = 1;
+    $limitTime = 90;
 
     // Verifique se já foi definida uma cor de fundo no cookie e se é uma cor válida
     if (isset($_COOKIE['background_color']) && in_array($_COOKIE['background_color'], $colors)) {
