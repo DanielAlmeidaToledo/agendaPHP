@@ -30,6 +30,10 @@
     justify-content: center;
 }
 
+.last-visit-image {
+    padding: 2rem;
+}
+
 /* Div principal-image */
 .principal-image {
     display: flex;
