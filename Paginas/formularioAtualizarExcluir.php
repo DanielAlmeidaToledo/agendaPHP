@@ -16,10 +16,12 @@
         <h1 class="principal-title">Atualização e Exclusão de Contato</h1>
 
         <?php
+            // Realiza a listagem dos contatos
             require_once("../DAO/agendaDAO.php");
             $agendaDAO = new AgendaDAO();
             $contatos = $agendaDAO->listarContatos();
 
+            // Verifica se existem contatos cadastrados
             if ($contatos) {
                 echo '<table class="table table-hover table-dark">
                         <thead>
@@ -31,7 +33,7 @@
                             </tr>
                         </thead>
                         <tbody>';
-
+                // Realiza a listagem dos contatos
                 foreach ($contatos as $contato) {
                     echo '<tr>
                             <th scope="row">' . $contato['id'] . '</th>
@@ -46,6 +48,7 @@
 
                 echo '</tbody></table>';
 
+                // Realiza a listagem dos modais
                 foreach ($contatos as $contato) {
                     // Modal de edição
                     echo '<div class="modal fade" id="editarModal' . $contato['id'] . '" tabindex="-1" role="dialog" aria-labelledby="editarModalLabel' . $contato['id'] . '" aria-hidden="true">
@@ -102,8 +105,9 @@
                             </div>
                         </div>';
                 }
-            } else {
-                echo "<p>Nenhum contato encontrado!</p>";
+            } else { // Caso não existam contatos cadastrados
+                echo "<img src='../Media/error.png' alt='Nenhum contato encontrado' style='display: block; margin: 10rem auto 2rem; width: 6rem;'>";
+                echo "<p style='text-align: center; font-size: 1.8rem;'>Nenhum contato encontrado!</p>";
             }
         ?>
 

@@ -5,13 +5,16 @@
 .principal-info, .principal-image {
     width: 50%;
     height: 100%;
+    overflow-x: hidden;
 }
 
-/* Div principal-buttons */
-.principal-buttons {
-    margin-top: 3rem;
+.principal-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
+/* Principal-buttons */
 .principal-link {
     width: 24rem;
     height: 3.5rem;

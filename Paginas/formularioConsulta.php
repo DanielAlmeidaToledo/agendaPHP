@@ -28,9 +28,10 @@
         </form>
 
         <?php
+            // Verifica se a variável de sessão existe
             if (isset($_SESSION['contacts'])) {
             $contacts = $_SESSION['contacts'];
-
+                // Verifica se a variável de sessão não está vazia
                 if (!empty($contacts)) {
 
                     echo "<div class='result-card'>
@@ -43,8 +44,8 @@
                             <br>
                          </div>";
 
-                    
-                } else  {
+                // Caso a variável de sessão esteja vazia, exibe mensagem de erro
+                } else  { 
 
                     echo "<div class='result-card not-found'>
                             <p><strong>Aluno não encontrado!</strong></p>
@@ -52,7 +53,7 @@
                         </div>";
                 }
 
-
+            // Realiza a limpeza da variável de sessão
             unset($_SESSION['contacts']);
             }
         ?>    
