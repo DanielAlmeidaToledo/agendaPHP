@@ -1,3 +1,11 @@
+<?php 
+    session_start();
+
+    if (!isset($_SESSION["perfil"])) {
+        header("Location: ../index.php");
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -13,7 +21,19 @@
 </head>
 <body>
     <div class="principal-content">
-        <h1 class="principal-title">Atualização e Exclusão de Contato</h1>
+        
+
+        <?php 
+                if($_SESSION["perfil"]){
+
+                    if($_SESSION["perfil"] == 'user'){
+                        echo "<h1 class='principal-title'>Lista de registros na agenda</h1>";
+
+                    } else if ($_SESSION["perfil"] == 'admin') {
+                        echo "<h1 class='principal-title'>Atualização e Exclusão de Contato</h1>";
+                    }
+                }
+        ?>
 
         <?php
             // Realiza a listagem dos contatos
@@ -23,27 +43,58 @@
 
             // Verifica se existem contatos cadastrados
             if ($contatos) {
-                echo '<table class="table table-hover table-dark">
-                        <thead>
-                            <tr>
-                                <th scope="col">Id</th>
-                                <th scope="col">Nome</th>
-                                <th scope="col">Telefone</th>
-                                <th scope="col" style="width: 15rem;">Ações</th>
-                            </tr>
-                        </thead>
-                        <tbody>';
+
+                if($_SESSION["perfil"]){
+
+                    if($_SESSION["perfil"] == 'user'){
+                        echo '<table class="table table-hover table-dark">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Id</th>
+                                    <th scope="col">Nome</th>
+                                    <th scope="col">Telefone</th>
+                                </tr>
+                            </thead>
+                            <tbody>';   
+
+                    } else if ($_SESSION["perfil"] == 'admin') {
+                        echo '<table class="table table-hover table-dark">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Id</th>
+                                    <th scope="col">Nome</th>
+                                    <th scope="col">Telefone</th>
+                                    <th scope="col" style="width: 15rem;">Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody>';                    
+                    }
+                }
+
                 // Realiza a listagem dos contatos
                 foreach ($contatos as $contato) {
-                    echo '<tr>
-                            <th scope="row">' . $contato['id'] . '</th>
-                            <td>' . $contato['nome'] . '</td>
-                            <td>' . $contato['telefone'] . '</td>
-                            <td>
-                                <button type="button" class="btn btn-table btn-table-edit" data-toggle="modal" data-target="#editarModal' . $contato['id'] . '">Editar</button>
-                                <button type="button" class="btn btn-table btn-danger" data-toggle="modal" data-target="#excluirModal' . $contato['id'] . '">Excluir</button>
-                            </td>
-                        </tr>';
+
+                    if($_SESSION["perfil"]){
+    
+                        if($_SESSION["perfil"] == 'user'){
+                            echo '<tr>
+                                    <th scope="row">' . $contato['id'] . '</th>
+                                    <td>' . $contato['nome'] . '</td>
+                                    <td>' . $contato['telefone'] . '</td>
+                                  </tr>';
+
+                        } else if ($_SESSION["perfil"] == 'admin') {
+                            echo '<tr>
+                                    <th scope="row">' . $contato['id'] . '</th>
+                                    <td>' . $contato['nome'] . '</td>
+                                    <td>' . $contato['telefone'] . '</td>
+                                    <td>
+                                        <button type="button" class="btn btn-table btn-table-edit" data-toggle="modal" data-target="#editarModal' . $contato['id'] . '">Editar</button>
+                                        <button type="button" class="btn btn-table btn-danger" data-toggle="modal" data-target="#excluirModal' . $contato['id'] . '">Excluir</button>
+                                    </td>
+                                  </tr>';
+                        }
+                    }
                 }
 
                 echo '</tbody></table>';

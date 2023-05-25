@@ -1,4 +1,10 @@
 <?php
+    session_start();
+
+    if (!isset($_SESSION["perfil"])) {
+        header("Location: ../index.php");
+    }
+
     // Defina as cores disponíveis
     $colors = array('#FF0000', '#00FF00', '#0000FF', '#FFFF00', '#FF00FF', '#00FFFF', '#FFA500', '#800080', '#008000', '#FFC0CB');
 
@@ -53,21 +59,83 @@
             padding: 1rem; 
             width: 2rem;
         }
+
+        .logout-button {
+            position: absolute !important;
+            inset: 0 2rem auto auto;
+            width: 2rem;
+        }
+
+        .logout-button button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+        }
+
+        .logout-button img {
+            width: 80%;
+        }
     </style>
 </head>
 <body>
 
+    <?php 
+
+        if(isset($_GET['logout'])) {
+            session_start();
+            session_unset();
+            session_destroy();
+            header("Location: ../index.php");
+            exit();
+        } 
+    ?>
+
+    <form action="#" method="GET" class='logout-button'>
+        <button name='logout'>
+            <img src='../Media/logout.png' alt='Sair'>
+        </button>
+    </form>
+
     <div class="principal-content">
         <div class="principal-info">
             <h1 class="principal-title">Menu Principal</h1>
-            <div class="principal-buttons">
-                <a class="principal-link" href="formularioInclusao.php">Incluir</a>
-                <a class="principal-link" href="formularioConsulta.php">Consultar</a>
-                <a class="principal-link" href="formularioAtualizarExcluir.php">Atualizar e Excluir</a>
-            </div>
+
+            <?php 
+                if($_SESSION["perfil"]){
+
+                    if($_SESSION["perfil"] == 'user'){
+                        echo "<div class='principal-buttons'>
+                                <a class='principal-link' href='formularioConsulta.php'>Consultar</a>
+                                <a class='principal-link' href='formularioAtualizarExcluir.php'>Visualizar lista</a>
+                              </div>";
+
+                    } else if ($_SESSION["perfil"] == 'admin') {
+                        echo "<div class='principal-buttons'>
+                                <a class='principal-link' href='formularioInclusao.php'>Incluir</a>
+                                <a class='principal-link' href='formularioConsulta.php'>Consultar</a>
+                                <a class='principal-link' href='formularioAtualizarExcluir.php'>Atualizar e Excluir</a>
+                              </div>";
+                    }
+                }
+            ?>
+
         </div>
+
         <div class="principal-image">
-            <img class="principal-image" src="../Media/img1.svg" alt="Imagem de uma agenda">
+            <?php 
+                if($_SESSION["perfil"]){
+
+                    if($_SESSION["perfil"] == 'user'){
+                        echo "<img class='principal-image' src='../Media/img1.svg' alt='Imagem de uma agenda'>";
+
+                    } else if ($_SESSION["perfil"] == 'admin') {
+                        echo "<img class='principal-image' src='../Media/img2.svg' alt='Imagem de um admin'>";
+                    }
+                }
+            ?>
         </div>
     </div>
 
@@ -77,7 +145,7 @@
 
     <footer>
         <p>Desenvolvido por <a href="https://br.linkedin.com/in/danielalmeidadetoledo" target="_blank">Daniel Toledo</a></p>
-    </footer>
+    </footer>    
     
 </body>
 </html>
